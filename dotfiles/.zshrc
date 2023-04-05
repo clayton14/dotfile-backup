@@ -11,13 +11,13 @@ alias off="qdbus org.kde.Shutdown /Shutdown logoutAndShutdown"
 alias sys="systemctl"
 alias la="la -a"
 alias all="ls -al"
-alias sysctl="systemctl"
 alias jctl="journalctl"
 alias vim="nvim"
 alias zs="nvim ~/.zshrc"
 
 
 # env vars #
+export ZSH=~/.oh-my-zsh
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export PICO_SDK_PATH=/opt/pico-sdk
@@ -33,6 +33,7 @@ plugins=(
     python
 )
 
+source $ZSH/oh-my-zsh.sh
 
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
